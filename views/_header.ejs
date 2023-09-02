@@ -1,1 +1,9 @@
-<h1>header</h1>
+<nav class="navbar navbar-expand-sm bg-light" id="header-container">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-4" href="/" id="heading-issue-tracker">
+      Issue Tracker
+    </a>
+    <% if( title === "Project Page"){ %> <%- include('_issue_form'); %> <%
+    }else{ %> <%- include('_project_form'); %> <% } %>
+  </div>
+</nav>
