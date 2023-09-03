@@ -16,7 +16,7 @@
       data-bs-toggle="modal"
       data-bs-target="#allIssue"
     >
-      Show All Issues
+      All Issues
     </button>
 
     <!-- Modal -->
@@ -55,7 +55,8 @@
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn"
+              id="button-close"
               data-bs-dismiss="modal"
             >
               Close
@@ -159,7 +160,8 @@
             <div class="modal-footer">
               <button
                 type="button"
-                class="btn btn-secondary"
+                class="btn"
+                id="button-close"
                 data-bs-dismiss="modal"
               >
                 Close
@@ -167,7 +169,8 @@
               <button
                 type="submit"
                 data-bs-dismiss="modal"
-                class="btn btn-primary"
+                class="btn"
+                id="button-submit"
               >
                 See Issues
               </button>
@@ -250,7 +253,8 @@
             <div class="modal-footer">
               <button
                 type="button"
-                class="btn btn-secondary"
+                class="btn"
+                id="button-close"
                 data-bs-dismiss="modal"
               >
                 Close
@@ -258,7 +262,8 @@
               <button
                 type="submit"
                 data-bs-dismiss="modal"
-                class="btn btn-primary"
+                class="btn"
+                id="button-submit"
               >
                 See Issues
               </button>
@@ -274,3 +279,5 @@
   <div class="card w-100 mb-5" style="width: 18rem" id="issues-list"></div>
 </div>
 <div id="issue-data" data="<%=JSON.stringify(project.issues)%>"></div>
+<script src="/js/filterIssues.js"></script>
+<script src="/js/searchIssues.js"></script>

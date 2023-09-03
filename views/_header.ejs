@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-sm bg-light" id="header-container">
+<nav class="navbar navbar-expand-sm" id="header-container">
   <div class="container-fluid">
     <a class="navbar-brand ms-4" href="/" id="heading-issue-tracker">
-      Issue Tracker
+      <i class="fa-brands fa-algolia"></i> Issue Tracker
     </a>
     <% if( title === "Project Page"){ %> <%- include('_issue_form'); %> <%
     }else{ %> <%- include('_project_form'); %> <% } %>
