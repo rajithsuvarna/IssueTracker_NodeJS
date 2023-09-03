@@ -4,7 +4,7 @@ main().catch((err) => console.log(err));
 
 //connecting to mongodb
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/Issue_Tracker_Project");
+  await mongoose.connect("mongodb+srv://rajithsuvarna49:rajithsuvarna49@cluster0.qbfqvzm.mongodb.net/issuetracker?retryWrites=true&w=majority");
 }
 
 //to check the mongodb connection
