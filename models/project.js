@@ -1,5 +1,7 @@
+//project model
 const mongoose = require("mongoose");
 
+//creating project schema
 const projectSchema = new mongoose.Schema(
   {
     name: {
@@ -15,12 +17,14 @@ const projectSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    //to add the created issues
     issues: [
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Issue",
       },
     ],
+    //to add the labels
     labels: [
       {
         type: String,
@@ -34,4 +38,5 @@ const projectSchema = new mongoose.Schema(
 
 const Project = mongoose.model("Project", projectSchema);
 
+//exporting the model
 module.exports = Project;

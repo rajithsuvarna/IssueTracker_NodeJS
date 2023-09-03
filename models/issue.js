@@ -1,5 +1,7 @@
-const mongoose = require('mongoose');
+//model for isuues
+const mongoose = require("mongoose");
 
+//creating issue schema
 const issueSchema = new mongoose.Schema(
   {
     title: {
@@ -30,6 +32,7 @@ const issueSchema = new mongoose.Schema(
   }
 );
 
-const Issue = mongoose.model('Issue', issueSchema);
+const Issue = mongoose.model("Issue", issueSchema);
 
+//exporting the model
 module.exports = Issue;

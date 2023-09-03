@@ -2,7 +2,7 @@ const Project = require("../models/project");
 const Issue = require("../models/issue");
 const { findById } = require("../models/project");
 
-// create a project for the user
+// create the project with the values obtained from the request
 module.exports.createProject = async function (req, res) {
   try {
     await Project.create({
@@ -17,7 +17,7 @@ module.exports.createProject = async function (req, res) {
   }
 };
 
-// find project and display it in the project page
+// to render the project page ejs
 module.exports.projectPage = async function (req, res) {
   try {
     let project = await Project.findById(req.params.id).populate({
@@ -35,5 +35,3 @@ module.exports.projectPage = async function (req, res) {
     return res.redirect("back");
   }
 };
-
-// create issue
