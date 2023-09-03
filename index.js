@@ -2,7 +2,7 @@ const express = require("express");
 const port = 8000;
 const db = require("./config/mongoose");
 const expressLayouts = require("express-ejs-layouts");
-const sassMiddleware = require("node-sass-middleware");
+
 
 //using express
 const app = express();
@@ -13,15 +13,7 @@ app.use(expressLayouts);
 app.use(express.urlencoded());
 //setup for static files and sass
 app.use(express.static("./assets"));
-app.use(
-  sassMiddleware({
-    src: "./assets/scss",
-    dest: "./assets/css",
-    debug: true,
-    outputStyle: "expanded",
-    prefix: "/css",
-  })
-);
+
 app.set("layout extractStyles", true);
 app.set("layout extractScripts", true);
 
